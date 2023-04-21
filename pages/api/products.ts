@@ -1,17 +1,8 @@
-const { request, gql, GraphQLClient } = require('graphql-request')
+//runs a query that calls the server created in server.js
+const { gql, GraphQLClient } = require('graphql-request')
+import { QueryResult } from '../../interfaces';
 
 const client = new GraphQLClient('http://localhost:4000');
-
-interface Product {
-    id: string;
-    name: string;
-    description: string;
-  }
-
-interface QueryResult {
-    products: Product[];
-  }
-  
 
 const query = gql`
   query {
@@ -23,6 +14,7 @@ const query = gql`
   }
 `
 
-client.request(query)
-  .then((data: Promise<QueryResult>) => console.log(data))
-  .catch((error: Error) => console.error(error));
+client.request<QueryResult>(query)
+    .then((data) => console.log(data))
+    .catch((error: Error) => console.error(error));
+

@@ -1,3 +1,4 @@
+//runs a server at localhost 4000
 const { ApolloServer, gql } = require("apollo-server");
 
 const typeDefs = gql`
