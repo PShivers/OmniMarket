@@ -10,19 +10,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb:  81, 132, 231;
+    --foreground-rgb:  214,211,205;
+    --foreground-hex: #e5e5e5;
+    --background-hex: #2e2e2e;
     --background-start-rgb:  24, 26, 27;
-    --background-end-rgb: 132, 146, 166;
+    --background-end-rgb: 214,211,205;
   }
 }
 
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  color: var(--foreground-hex);
+  background: var(--background-hex);
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }

@@ -7,25 +7,18 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    // colors: {
-    //   blue: "#5184e7",
-    //   white: "FAEBD7",
-    //   purple: "#7e5bef",
-    //   pink: "#ff49db",
-    //   orange: "#ff7849",
-    //   green: "#13ce66",
-    //   yellow: "#ffc82c",
-    //   "gray-dark": "#181a1b",
-    //   gray: "#8492a6",
-    //   "gray-light": "#D6D3CD",
-    // },
-    // extend: {
-    //   backgroundImage: {
-    //     "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-    //     "gradient-conic":
-    //       "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-    //   },
-    // },
+    extend: {
+      backgroundColor: {
+        themeDarkGray: "#191919",
+        themeGray: "#2e2e2e",
+      },
+      colors: {
+        themeWhite: "#e5e5e5",
+        themeIndigo: "#4f46e5",
+        themeDarkGray: "#191919",
+        themeYellow: "#e5b567",
+      },
+    },
   },
   plugins: [],
 };
