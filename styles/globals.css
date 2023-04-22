@@ -10,9 +10,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --tw-border-opacity: .5;
+    --tw-shadow-color: rgba(0, 0, 0, 0.824);
     --foreground-rgb:  214,211,205;
     --foreground-hex: #e5e5e5;
-    --background-hex: #2e2e2e;
+    --background-hex: #4C4C4C;
+    --foreground-start-hex: #4C4C4C;
+    --background-end-hex: #7A9983;
     --background-start-rgb:  24, 26, 27;
     --background-end-rgb: 214,211,205;
   }
@@ -21,11 +25,83 @@
 
 body {
   color: var(--foreground-hex);
-  background: var(--background-hex);
-  /* background: linear-gradient(
+  /* background: var(--background-hex); */
+  background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      var(--foreground-start-hex)
     )
-    rgb(var(--background-start-rgb)); */
+    var(--foreground-start-hex);
 }
+
+/* For Webkit Browsers */
+
+::-webkit-scrollbar {
+  width: 8px; /* width of the scrollbar */
+  border-radius: 5px; /* radius of the scrollbar corners */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f2f2f2; /* color of the track */
+  border-radius: 5px; /* radius of the track corners */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* color of the thumb */
+  border-radius: 5px; /* radius of the thumb corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* color of the thumb on hover */
+}
+
+/* For Firefox Browsers */
+
+/* width */
+div::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 5px; /* radius of the scrollbar corners */
+}
+
+/* Track */
+div::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 5px; /* radius of the track corners */
+}
+
+/* Handle */
+div::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px; /* radius of the thumb corners */
+}
+
+/* Handle on hover */
+div::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/* For IE/Edge Browsers */
+
+/* width */
+div::-ms-scrollbar {
+  width: 8px;
+  border-radius: 5px; /* radius of the scrollbar corners */
+}
+
+/* Track */
+div::-ms-track {
+  background: #f1f1f1; 
+  border-radius: 5px; /* radius of the track corners */
+}
+
+/* Handle */
+div::-ms-thumb {
+  background: #888; 
+  border-radius: 5px; /* radius of the thumb corners */
+}
+
+/* Handle on hover */
+div::-ms-thumb:hover {
+  background: #555; 
+}
+

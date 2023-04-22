@@ -3,7 +3,7 @@ import SearchBar from "./SearchBar";
 
 export default function Header() {
   return (
-    <header className="shadow border-b-2 border-themeYellow bg-themeDarkGray h-16">
+    <header className="shadow border-b-2 border-themeWhite bg-themeDarkGray h-16">
       <nav className="max-w-100 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex w-full ">

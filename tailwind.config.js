@@ -10,13 +10,14 @@ module.exports = {
     extend: {
       backgroundColor: {
         themeDarkGray: "#191919",
-        themeGray: "#2e2e2e",
+        themeGray: "#4C4C4C",
       },
       colors: {
         themeWhite: "#e5e5e5",
         themeIndigo: "#4f46e5",
         themeDarkGray: "#191919",
-        themeYellow: "#e5b567",
+        // themeYellow: "#e5b567",
+        themeYellow: "#FF9800",
       },
     },
   },

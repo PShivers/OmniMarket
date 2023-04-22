@@ -1,6 +1,18 @@
-import React from "react";
+import React, { ChangeEvent, useState } from "react";
 
 export default function SearchBar() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    // console.log(e);
+    setSearchTerm(e.target.value);
+  };
+
+  const handleSearch = () => {
+    console.log(searchTerm);
+    // You can do something with the searchTerm value here, like search your database or filter your results
+  };
+
   return (
     <div className="ml-8 flex items-center">
       <div className="relative flex w-full flex-wrap items-stretch">
@@ -10,6 +22,8 @@ export default function SearchBar() {
           placeholder="Search"
           aria-label="Search"
           aria-describedby="button-addon1"
+          value={searchTerm}
+          onChange={handleInputChange}
         />
 
         <button
@@ -18,6 +32,7 @@ export default function SearchBar() {
           id="button-addon1"
           data-te-ripple-init
           data-te-ripple-color="light"
+          onClick={handleSearch}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -33,6 +48,7 @@ export default function SearchBar() {
           </svg>
         </button>
       </div>
+
       {/* <div className="sm:-my-px ml-6 sm:flex sm:space-x-8">
               <div className="relative flex w-full align-middle">
                 <div className="h-16 w-full flex items-center">
