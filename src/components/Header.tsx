@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBar from "./SearchBar";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -15,14 +16,15 @@ export default function Header() {
             <SearchBar />
           </div>
 
-          {/* <div className="flex justify-center">
-            <button
+           <div className="flex justify-center items-center">
+            <Link
+              href="/SignIn"
               type="button"
-              className="rounded-md border border-transparent text-base font-small text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="h-10 text-sm rounded-md border border-transparent text-center text-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >
               Sign In
-            </button>
-          </div> */}
+            </Link>
+          </div> 
         </div>
       </nav>
     </header>

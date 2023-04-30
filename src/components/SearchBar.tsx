@@ -14,7 +14,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="ml-8 flex items-center">
+    <div className="ml-8 mr-8 flex w-full items-center">
       <div className="relative flex w-full flex-wrap items-stretch">
         <input
           type="search"
@@ -48,33 +48,6 @@ export default function SearchBar() {
           </svg>
         </button>
       </div>
-
-      {/* <div className="sm:-my-px ml-6 sm:flex sm:space-x-8">
-              <div className="relative flex w-full align-middle">
-                <div className="h-16 w-full flex items-center">
-                  <input
-                    type="text"
-                    className="w-full px-4 py-2 pr-10 rounded-lg shadow-sm focus:outline-none focus:shadow-outline-blue h-7"
-                    placeholder="Search..."
-                  />
-                </div>
-
-                <button type="submit" className="relative self-center right-6">
-                  <svg
-                    className="h-4 w-4 text-gray-400"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M22 22l-6-6"></path>
-                    <path d="M16 10a6 6 0 1 0-12 0 6 6 0 0 0 12 0z"></path>
-                  </svg>
-                </button>
-              </div>
-            </div> */}
     </div>
   );
 }
