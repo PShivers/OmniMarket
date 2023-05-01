@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  /* --tw-shadow-color: rgba(0, 0, 0, 2.1); */
   --foreground-rgb: 81, 132, 231;
   --background-start-rgb: 81, 132, 231;
   --background-end-rgb:81, 132, 231;
@@ -11,7 +12,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --tw-border-opacity: .5;
-    --tw-shadow-color: rgba(0, 0, 0, 0.824);
+    --tw-shadow-color: rgba(0, 0, 0, 2.1);
+    /* --tw-shadow-color: rgba(0, 0, 0, 0.824); */
     --foreground-rgb:  214,211,205;
     --foreground-hex: #e5e5e5;
     --background-hex: #4C4C4C;

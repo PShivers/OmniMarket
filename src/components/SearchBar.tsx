@@ -2,15 +2,17 @@ import React, { ChangeEvent, useState } from "react";
 
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
+  const [results, setResults] = useState([]);
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    // console.log(e);
     setSearchTerm(e.target.value);
   };
 
-  const handleSearch = () => {
+  const handleSearch = async () => {
     console.log(searchTerm);
-    // You can do something with the searchTerm value here, like search your database or filter your results
+    const response = await fetch(`../../api/search?q=${searchTerm}`);
+    const data = await response.json();
+    setResults(data.results);
   };
 
   return (

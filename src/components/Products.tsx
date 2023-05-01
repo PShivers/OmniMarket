@@ -1,17 +1,5 @@
 import React from "react";
-
-type Product = {
-  product_id: number;
-  product_name: string;
-  style: string;
-  category: string;
-  imageUrl: string;
-  description: string;
-};
-
-type ProductsProps = {
-  products: Product[];
-};
+import { ProductsProps } from "@/interfaces";
 
 export default function Products({ products }: ProductsProps) {
   return (
