@@ -1,44 +1,27 @@
-//runs a query that calls the server created in server.js
-const { gql, GraphQLClient } = require("graphql-request");
-import { QueryResult } from "../../interfaces";
+import { request, gql } from 'graphql-request';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-const client = new GraphQLClient("http://localhost:4000");
+export default async function handler(req: NextApiRequest, res:NextApiResponse) {
+  // const searchQuery = req.query.searchQuery; // get the search query from the query string
 
-const query = gql`
-  query {
-    products {
-      product_id
-      product_name
-      style
-      category
-      imageUrl
-      description
+  const query = gql`
+    query {
+      products {
+        product_id
+        product_name
+        style
+        category
+        imageUrl
+        description
+      }
     }
+  `;
+  
+  try {
+    const data = await request('http://localhost:4000', query);
+    res.status(200).json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Something went wrong' });
   }
-`;
-
-client
-  //   .request<QueryResult>(query)
-  .request(query)
-  .then((data: QueryResult) => console.log(data))
-  .catch((error: Error) => console.error(error));
-
-// import { NextApiRequest, NextApiResponse } from "next";
-// import { getProducts } from "../../interfaces";
-
-// export default async function handler(
-//   req: NextApiRequest,
-//   res: NextApiResponse
-// ) {
-//   if (req.method === "GET") {
-//     try {
-//       const products = await getProducts();
-//       res.status(200).json(products);
-//     } catch (error) {
-//       console.error(error);
-//       res.status(500).json({ error: "Internal server error" });
-//     }
-//   } else {
-//     res.status(405).json({ error: "Method not allowed" });
-//   }
-// }
+}

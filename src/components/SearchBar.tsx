@@ -8,9 +8,10 @@ export default function SearchBar() {
     setSearchTerm(e.target.value);
   };
 
-  const handleSearch = async () => {
-    console.log(searchTerm);
-    const response = await fetch(`../../api/search?q=${searchTerm}`);
+  const handleSearch = async (e: SubmitEvent) => {
+    e.preventDefault();
+    // const response = await fetch(`../../api/search?q=${searchTerm}`);
+    const response = await fetch(`../../api/search`);
     const data = await response.json();
     setResults(data.results);
   };
