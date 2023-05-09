@@ -2,7 +2,10 @@ const products = require("../db");
 
 const resolvers = {
 	Query: {
-		products: () => products,
+		getProducts: () => products,
+		productById: (root, args, context, info) => {
+			return products.find((product) => product.product_id == args.product_id);
+		},
 	},
 };
 

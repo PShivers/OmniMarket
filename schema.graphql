@@ -1,6 +1,6 @@
 type Query {
-	products: [Product]
-	# productByName(name: product_name!): [Product]
+	getProducts: [Product]
+	productById(product_id: ID!): Product
 }
 
 type Product {
