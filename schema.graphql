@@ -1,12 +1,12 @@
 type Query {
-	products: [Product!]!
+	products: [Product]
 }
 
 type Product {
 	product_id: ID!
-	product_name: String!
-	style: String!
-	category: String!
-	imageUrl: String!
-	description: String!
+	product_name: String
+	style: String
+	category: String
+	imageUrl: String
+	description: String
 }
