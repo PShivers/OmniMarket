@@ -8,7 +8,7 @@ const resolvers = {
 			return products.find((product) => product.productId == args.productId);
 		},
 
-		queryProductNames: (root, args, context, info) => {
+		getProductsByName: (root, args, context, info) => {
 			return products.filter((product) => {
 				return product.productName
 					.toLowerCase()
