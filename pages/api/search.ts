@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res:NextApiResponse) 
   // const searchQuery = req.query.searchQuery; // get the search query from the query string
 
   const query = gql`
-    query {
+    query GetProducts {
       products {
         productId
         productName
@@ -14,7 +14,7 @@ export default async function handler(req: NextApiRequest, res:NextApiResponse) 
         imageUrl
         description
       }
-    }
+  }
   `;
   
   try {

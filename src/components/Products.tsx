@@ -1,7 +1,16 @@
-import React from "react";
-import { ProductsProps } from "@/interfaces";
+import React, { useState, useEffect } from "react";
+import { ProductsProps, Product } from "@/interfaces";
 
-export default function Products({ products }: ProductsProps) {
+export default function Products() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    fetch('/api/search')
+      .then(response => response.json())
+      .then(data => setProducts(data.products))
+      .catch(error => console.error(error));
+  }, []);
+
   return (
     <div className="flex justify-evenly flex-wrap mt-5">
       {products.map((product) => (

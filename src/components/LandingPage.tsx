@@ -1,6 +1,6 @@
 import React from "react";
 import Products from "./Products";
-import { products } from "../utils/ProductsDummy";
+// import { products } from "../utils/ProductsDummy";
 
 export default function LandingPage() {
   return (
@@ -19,7 +19,8 @@ export default function LandingPage() {
             anything you can imagine, all in one convenient place and at
             competitive prices.
           </p>
-          <Products products={products} />
+          {/* <Products products={products} /> */}
+          <Products />          
         </div>
       </div>
     </main>

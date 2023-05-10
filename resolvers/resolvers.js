@@ -2,7 +2,7 @@ const products = require("../db");
 
 const resolvers = {
 	Query: {
-		getProducts: () => products,
+		products: () => products,
 
 		productById: (root, args, context, info) => {
 			return products.find((product) => product.productId == args.productId);
@@ -17,7 +17,7 @@ const resolvers = {
 		},
 	},
 	Mutation: {
-		createProduct: (root, { product }, { db }) => {
+		createProduct: (root, { product }, context, info) => {
 			const lastProductId =
 				products.length > 0 ? products[products.length - 1].productId : 0;
 			const newProduct = {
