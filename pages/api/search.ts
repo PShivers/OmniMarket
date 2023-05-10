@@ -3,6 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res:NextApiResponse) {
   // const searchQuery = req.query.searchQuery; // get the search query from the query string
+  //adding to test a commit 
 
   const query = gql`
     query GetProducts {
