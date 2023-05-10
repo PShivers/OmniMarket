@@ -4,6 +4,18 @@ type Query {
 	queryProductNames(searchTerm: String!): [Product]
 }
 
+type Mutation {
+	createProduct(product: ProductInput!): Product
+}
+
+input ProductInput {
+	productName: String!
+	style: String
+	category: String
+	imageUrl: String
+	description: String
+}
+
 type Product {
 	productId: ID!
 	productName: String

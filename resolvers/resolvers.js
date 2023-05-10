@@ -3,6 +3,7 @@ const products = require("../db");
 const resolvers = {
 	Query: {
 		getProducts: () => products,
+
 		productById: (root, args, context, info) => {
 			return products.find((product) => product.productId == args.productId);
 		},
@@ -13,6 +14,18 @@ const resolvers = {
 					.toLowerCase()
 					.includes(args.searchTerm.toLowerCase());
 			});
+		},
+	},
+	Mutation: {
+		createProduct: (root, { product }, { db }) => {
+			const lastProductId =
+				products.length > 0 ? products[products.length - 1].productId : 0;
+			const newProduct = {
+				productId: lastProductId + 1,
+				...product,
+			};
+			products.push(newProduct);
+			return newProduct;
 		},
 	},
 };
