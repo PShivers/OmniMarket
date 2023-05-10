@@ -1,6 +1,7 @@
 type Query {
 	getProducts: [Product]
 	productById(productId: ID!): Product
+	queryProductNames(searchTerm: String!): [Product]
 }
 
 type Product {
