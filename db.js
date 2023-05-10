@@ -1,8 +1,8 @@
 //dummy data
 const products = [
 	{
-		product_id: 1,
-		product_name: "Mid-Century Sofa",
+		productId: 1,
+		productName: "Mid-Century Sofa",
 		style: "Mid-Century",
 		category: "Sofa",
 		imageUrl: "MidCenturySofa.png",
@@ -10,8 +10,8 @@ const products = [
 			"Upgrade your living space with the sleek and stylish Mid-Century Sofa, featuring clean lines, retro accents, and comfortable seating perfect for modern living.",
 	},
 	{
-		product_id: 2,
-		product_name: "Rustic Wood Coffee Table",
+		productId: 2,
+		productName: "Rustic Wood Coffee Table",
 		style: "Rustic",
 		category: "Table",
 		imageUrl: "RusticWoodCoffeeTable.png",
@@ -19,8 +19,8 @@ const products = [
 			"Add a touch of natural beauty to your living space with this Rustic Wood Coffee Table, featuring a solid wood construction and charming details that showcase the natural beauty of the materials. Perfect for those who appreciate the rustic charm and warmth of natural wood furniture.",
 	},
 	{
-		product_id: 3,
-		product_name: "Leather Accent Chair",
+		productId: 3,
+		productName: "Leather Accent Chair",
 		style: "Traditional",
 		category: "Chair",
 		imageUrl: "LeatherAccentChair.png",
@@ -28,8 +28,8 @@ const products = [
 			"A traditional-style accent chair with leather upholstery and a sturdy wooden frame. Perfect for adding a touch of sophistication to any room.",
 	},
 	{
-		product_id: 4,
-		product_name: "Modern Glass Dining Table",
+		productId: 4,
+		productName: "Modern Glass Dining Table",
 		style: "Modern",
 		category: "Table",
 		imageUrl: "ModernGlassDiningTable.png",
@@ -37,8 +37,8 @@ const products = [
 			"A modern-style dining table with a sleek, glass top and sturdy metal legs. Perfect for hosting dinner parties and gatherings with friends and family.",
 	},
 	{
-		product_id: 5,
-		product_name: "Contemporary Leather Sofa",
+		productId: 5,
+		productName: "Contemporary Leather Sofa",
 		style: "Contemporary",
 		category: "Sofa",
 		imageUrl: "ContemporaryLeatherSofa.png",
@@ -46,8 +46,8 @@ const products = [
 			"A luxurious leather sectional sofa with a modern design. Includes a chaise lounge and plenty of seating space, making it perfect for entertaining guests or relaxing with family.",
 	},
 	{
-		product_id: 6,
-		product_name: "Antique Writing Desk",
+		productId: 6,
+		productName: "Antique Writing Desk",
 		style: "Antique",
 		category: "Desk",
 		imageUrl: "AntiqueWritingDesk.png",
@@ -55,8 +55,8 @@ const products = [
 			" A classic-style writing desk with a timeless design. Features a spacious work surface and multiple drawers for storing pens, paper, and other supplies.",
 	},
 	{
-		product_id: 7,
-		product_name: "Vintage Armchair",
+		productId: 7,
+		productName: "Vintage Armchair",
 		style: "Vintage",
 		category: "Chair",
 		imageUrl: "VintageArmchair.png",
@@ -64,8 +64,8 @@ const products = [
 			"Add timeless elegance to your living space with this Vintage Armchair. Crafted from luxurious materials, this sturdy and comfortable armchair features unique details that will make it the centerpiece of any room.",
 	},
 	{
-		product_id: 8,
-		product_name: "Industrial Bookcase",
+		productId: 8,
+		productName: "Industrial Bookcase",
 		style: "Industrial",
 		category: "Bookcase",
 		imageUrl: "IndustrialBookcase.png",
@@ -73,8 +73,8 @@ const products = [
 			"A sturdy and stylish bookshelf with an industrial-style design. Made from metal and wood, it's perfect for displaying books, plants, and other decorative items.",
 	},
 	{
-		product_id: 9,
-		product_name: "Classic Wingback Chair",
+		productId: 9,
+		productName: "Classic Wingback Chair",
 		style: "Classic",
 		category: "Chair",
 		imageUrl: "ClassicWingbackChair.png",
@@ -82,8 +82,8 @@ const products = [
 			"Sophistication and elegance meet comfort and style in this classic wingback chair. Its button-tufted upholstery and solid construction make it a durable and long-lasting addition to any home decor.",
 	},
 	{
-		product_id: 10,
-		product_name: "Farmhouse Dining Table",
+		productId: 10,
+		productName: "Farmhouse Dining Table",
 		style: "Farmhouse",
 		category: "Table",
 		imageUrl: "FarmhouseDiningTable.png",

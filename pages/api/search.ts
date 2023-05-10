@@ -7,8 +7,8 @@ export default async function handler(req: NextApiRequest, res:NextApiResponse) 
   const query = gql`
     query {
       products {
-        product_id
-        product_name
+        productId
+        productName
         style
         category
         imageUrl

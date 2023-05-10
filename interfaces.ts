@@ -1,6 +1,6 @@
 export interface Product {
-  product_id: number;
-  product_name: string;
+  productId: number;
+  productName: string;
   style: string;
   category: string;
   imageUrl: string;

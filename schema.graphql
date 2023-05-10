@@ -1,11 +1,11 @@
 type Query {
 	getProducts: [Product]
-	productById(product_id: ID!): Product
+	productById(productId: ID!): Product
 }
 
 type Product {
-	product_id: ID!
-	product_name: String
+	productId: ID!
+	productName: String
 	style: String
 	category: String
 	imageUrl: String
