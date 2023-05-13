@@ -22,6 +22,17 @@ export const getProductsByNameAsync = createAsyncThunk(
 	}
 );
 
+export const getProductByIdAsync = createAsyncThunk(
+	`products/getProductByIdAsync`,
+	async (productId) => {
+		const resp = await fetch(`api/getProductById?productId=${productId}`);
+		if (resp.ok) {
+			const product = await resp.json();
+			return product;
+		}
+	}
+);
+
 export const productSlice = createSlice({
 	name: "products",
 	initialState: [],
@@ -33,7 +44,11 @@ export const productSlice = createSlice({
 			})
 			.addCase(getProductsByNameAsync.fulfilled, (state, action) => {
 				return action.payload.getProductsByName;
-			});
+			})
+			.addCase(getProductByIdAsync.fulfilled),
+			(state, action) => {
+				return action.payload.product;
+			};
 	},
 });
 

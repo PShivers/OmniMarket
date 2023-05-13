@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Product } from "@/interfaces";
 import { useDispatch, useSelector } from "react-redux";
-import {getProductsAsync} from "../redux/productSlice"
+import {getProductsAsync, getProductByIdAsync} from "../redux/productSlice"
 
 export default function Products() {
   const dispatch = useDispatch();
@@ -11,12 +11,18 @@ export default function Products() {
     dispatch(getProductsAsync() as any);
   }, [dispatch])
 
+  const handleClick = (e: React.MouseEvent<HTMLDivElement,MouseEvent> )=>{
+    dispatch(getProductByIdAsync(e.currentTarget.dataset.index) as any);
+  }
+
   return (
     <div className="flex justify-evenly flex-wrap mt-5">
       {products.map((product) => (
         <div
           className="max-w-sm rounded overflow-hidden shadow-lg bg-themeWhite mt-4"
           key={product.productId}
+          data-index={product.productId.toString()}
+          onClick={handleClick}
         >
           <img
             className="w-full"

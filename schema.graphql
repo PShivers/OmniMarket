@@ -1,7 +1,7 @@
 type Query {
 	products: [Product]
-	productById(productId: ID!): Product
 	getProductsByName(searchTerm: String!): [Product]
+	getProductById(productId: ID!): Product
 }
 
 type Mutation {

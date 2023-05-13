@@ -4,7 +4,7 @@ const resolvers = {
 	Query: {
 		products: () => products,
 
-		productById: (root, args, context, info) => {
+		getProductById: (root, args, context, info) => {
 			return products.find((product) => product.productId == args.productId);
 		},
 
