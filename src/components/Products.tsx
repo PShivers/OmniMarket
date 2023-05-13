@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { ProductsProps, Product } from "@/interfaces";
 
-export default function Products() {
-  const [products, setProducts] = useState<Product[]>([]);
+import { useDispatch, useSelector } from "react-redux";
+import {getProductsAsync} from "../redux/productSlice"
 
-  useEffect(() => {
-    fetch('/api/getProducts')
-      .then(response => response.json())
-      .then(data => setProducts(data.products))
-      .catch(error => console.error(error));
-  }, []);
+export default function Products() {
+  const dispatch = useDispatch();
+  const products = useSelector((state:{products: Product[]}) => state.products)
+
+  useEffect(()=>{
+    dispatch(getProductsAsync() as any);
+  }, [dispatch])
 
   return (
     <div className="flex justify-evenly flex-wrap mt-5">
