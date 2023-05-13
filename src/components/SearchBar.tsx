@@ -6,9 +6,7 @@ import { getProductsByNameAsync } from "../redux/productSlice";
 
 export default function SearchBar() {
   const [searchTerm, setSearchTerm] = useState("");
-  // const [results, setResults] = useState([]);
   const dispatch = useDispatch();
-  const products = useSelector((state: {products: Product[]}) => state.products)
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
@@ -19,13 +17,6 @@ export default function SearchBar() {
       console.log(searchTerm);
       dispatch(getProductsByNameAsync(searchTerm) as any);
   }
-
-  // const handleSubmit = async (e: SubmitEvent) => {
-  //   e.preventDefault();
-  //   const response = await fetch(`/api/getProductsByName?q=${searchTerm}`);
-  //   const data = await response.json();
-  //   setResults(data.results);
-  // };
 
   return (
     <div className="ml-8 mr-8 flex w-full items-center">
