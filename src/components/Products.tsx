@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { ProductsProps, Product } from "@/interfaces";
-
+import { Product } from "@/interfaces";
 import { useDispatch, useSelector } from "react-redux";
 import {getProductsAsync} from "../redux/productSlice"
 
