@@ -14,7 +14,6 @@ export default function SearchBar() {
 
   const handleSubmit = async (e:React.FormEvent) => {
       e.preventDefault();
-      console.log(searchTerm);
       dispatch(getProductsByNameAsync(searchTerm) as any);
   }
 

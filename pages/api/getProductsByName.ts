@@ -19,7 +19,6 @@ export default async function handler(req: NextApiRequest, res:NextApiResponse) 
 
   try {
     const data = await request('http://localhost:4000', query, {searchTerm});    
-    console.log(data)
     res.status(200).json(data);
   } catch (error) {
     console.error(error);

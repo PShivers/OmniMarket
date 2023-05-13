@@ -32,7 +32,6 @@ export const productSlice = createSlice({
 				return action.payload.products;
 			})
 			.addCase(getProductsByNameAsync.fulfilled, (state, action) => {
-				console.log(action);
 				return action.payload.getProductsByName;
 			});
 	},
